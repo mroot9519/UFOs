@@ -37,7 +37,6 @@ function buildTable(data) {
    
     // Check to see if a date was entered and filter the
     // data using that data
-    console.log('!!!!!!!!!!!!!!!!!!!!!!!')
     
     function filterTable(data) {
 
@@ -63,35 +62,9 @@ function buildTable(data) {
           result = row.shape === shape ? row : {}
         }
 
-        console.log(result)
-
         return result
       })
-      // if (date) {
-      //   // Apply `filter` to the table data to only keep the
-      //   // rows where the `datetime` value matches the filter value
-      //   filteredData = filteredData.filter(row => row.datetime === date);
-      // };
-      // console.log(filteredData)
-
-      // if (city) {
-      //   filteredData = filteredData.filter(row => row.city === city);
-      // }
-
-      // if (state) {
-      //   filteredData = filteredData.filter(row => row.state === state);
-      // }
-
-      // if (country) {
-      //   filteredData = filteredData.filter(row => row.country === country);
-      // }
-
-      // if (shape) {
-      //   filteredData = filteredData.filter(row => row.shape === shape);
-      // }
-      // Rebuild the table using the filtered data
-      // @NOTE: If no date was entered, then filteredData will
-      // just be the original tableData.
+      
       buildTable(filterTable(tableDate));
     }
     buildTable(filterTable(tableData));
